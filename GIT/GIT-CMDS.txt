@@ -1,0 +1,125 @@
+---------------------------GIT----------------------------
+
+git --version  # to check version of git
+
+#IN FIRST WE GET MASTER BRANCH
+
+#IF WE INSTALL GIT FIRST TIME WE HAVE TO CONFIG IT AND SET NAME AND USER EMAIL
+git config --global user.name  "YOUR NAME"  
+git config --global user.email "YOUR EMAIL"
+
+#TO CHECK THAT OUR EMAIL IS SET OR NOT  USE AGAIN 
+git config --global user.email
+"YOU GET YOUR EMAIL"
+
+#THERE IS ANPOTHER METHOD TO CHANGE OUR NAME AND EMAIL 
+#USING THIS COMMAND WE DIRECT GO TO THE CONFIG FILE AND EDIT OUR NAME AND EMAIL
+git config -global --edit 
+
+#IF WE WANT TO CREATE REPO OF OUR FOLDER IN GIT 
+git init
+
+#IF WE WANT TO KNOW WHAT CHANGES WE DONE IN THIS REPO OR FILE
+git status
+
+#TO CRETE FILE IN REPO AND ADD IN REPO
+git add "FILE NAME"
+
+AND THEN CHECK status
+git status
+"new file: "YOURFILE NAME"
+
+                        ----------[WORKING DIRECTORY]
+                       |
+                       |
+                    [GIT ADD]
+                       |
+                       |
+                        -----------[STAGING AREA]---------
+                                                          |
+                                                          |
+                                                          |
+                                                          |
+                                    [REPOSITORY]----------                
+                                                                                              
+#NOW OUR FILE IS IN STAGING AREA [FIRST WE STORE OUR FILE IN STARGING AREA AND THEN COMMIT AREA]
+#SO COMMIT OUR FILE
+git commit -m "MESSAGE YOU WANT"
+
+
+#IF THERE ARE MANY FILE AND YOU WANT ALL YOUR FILE TO PUT IN STAGING ARE THEN
+git add .
+
+#NOW YOU COMMIT ALL FILE TOGETHER
+git commit -m "YOUR MESSAGE"
+
+#IF YOU WANT TO SEE LOGS OF YOUR CHANGES
+git log
+"WE GET ALL LOGS"
+
+
+#IF YOU WANT TO DISCARD ALL CHANGES 
+git chechout "HASH CODE OF COMMIT / BRANCH NAME"
+"BRANCH DELETE / CHANGE UNDO "
+
+#NOW IF YOU WANT TO RE UNDO CHANGES
+git checkout master
+
+"YOU GET BACK YOUR DELETE/CHANGES BACK"
+
+#"CHECKOUT" COMMAND BASICALLY USE TO GO ONE BRANCH TO ANOTHER BRANCH
+
+#NOW IF WE WANT TO CREATE NEW BRANCH 
+git branch "YOUR NEW BRANCH NAME"
+
+#NOW CHECK BRANCHES 
+git branch
+"YOU GET ALL YOUR BRANCHES"
+
+#WE CAN CREATE INFINITE BRANCHES IN ONE BRANCH. GIT HAS A TREE STRUCTURE 
+
+#SUPPOSE YOU HAVE TWO BRANCHES ONE IS "MASTER" AND SECOND IS "CODE" AND YOUR CURRENT LOCATION IS "MASTER" BRANCH
+#AND YOU WANT TO GO "CODE" BRANCH
+git checkout "BRANCH NAME YOU WANT TO GO"
+"SWITCHED TO BRANCH 'CURRENT BRANCH NAME'"
+
+ 
+#THERE IS ANOTHER WAY TO CREATE NEW BRANCH AND CHECK OUT IN NEW BRANCH
+git check -b "YOUR NEW BRANCH NAME"
+"YOU ARE IN YOUR NEW BRANCH"
+
+#GOOD THING IN CREATING BRANCH IS THAT IF WE MAKE CHANGES IN ONE BRANCH THEN THAT WILL NOT AFFECT OTHER BRANCHES
+#BUT IF YOU WANT ONE BRANCH CODE IS OCCUR IN SECOND BRANCH THEN
+git merged "BRANCH NAME YOU WANT TO MERGED"
+
+#IF WE WANT THAT GIT NOT TRACK OUR FILE THEN WE CAN MAKE .GITIGNORE FOLDER AND PUT THAT FILE IN THIS FOLDER
+#FIRST GO TO MASTER BRANCH
+git branch .gitignore
+
+
+
+---------------------------------------GIT-HUB-----------------------------------
+
+#TO PUSH/FETCH CODE IN GITHUB THERE ARE SOME BASIC COMMANDS
+
+#YOU HAVE TO CREATE REPOSITORY IN YOUR GITHUB ACCOUNT SAME NAME AS YOUR PROJECT NAME
+git remote add origin "LINK OF YOUR GITHUB ACCOUNT"
+git branch -M master
+git push -u origin master
+
+#OPEN YOU COMMAND LINE
+git remote -v
+"YOU GET YOUR ORIGIN"
+
+#TO PUSH YOUR COMMAND ON GITHUB
+git push
+
+#TO PUSH HOLE BRANCH ON GITHUB
+#FIRST GO TO BRANCH YOU WANT TO PUSH
+git checkout "BRANCH NAME"
+#THEN
+git push -u origin "BRANCH NAME"
+
+
+
+

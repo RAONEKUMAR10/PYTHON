@@ -1,0 +1,26 @@
+# WITH BLOCK////////////////////////////////
+
+# IT IS ALSO KNOWN AS CONTEXT MANAGER
+# IN THIS METHOD WE DON'T ANY NEED TO CLOSE OUR PROGRAM AS WE DO IN SIMPLE READ FILES.
+# IF OUR FILE IS DAMAGED OR AYNTHING ELSE THEN CONTEXT MANAGER HANDEL IT SELF
+# SYNTAX-
+# with open('file_name or file_path') as VARIABLE_NAME:
+
+with open(r'C:\Users\lenovo\Desktop\READ&WRITE.txt','r') as P:
+   data=P.read()      # data IS ALSO A VARIABLE.WHICH IS USING TO PRINT 
+   print(data)
+
+# OUTPUT-
+# MY NAME IS RITIK KUMAR.
+# THIS FILE NAME IS READ&WRITE.
+# THIS IS A TEXT FILE.
+# THIS FILE IS SAVE ON A DESKTOP OF MY LAPTOP.
+# I'M GONNA USE THIS FILE TO READ AND WRITE VIA PYTHON. 
+
+# WE CAN CHECK THAT OUR FILE IS CLOSED OR NOT 
+
+with open(r'C:\Users\lenovo\Desktop\READ&WRITE.txt','r') as P:
+   # f=P.open()
+   print(P.read())
+
+print(P.closed)

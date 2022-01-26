@@ -1,0 +1,21 @@
+# IMAGE EDITING/////////////
+
+#INSTALLATION PILOW LIBRARY
+# CHANGE THE IMAGE EXTENTION (jpg,pdf,etc.)
+# RESIZE IMAGE FILES
+# RESIZE MULTIPLE IMAGES USING FOR LOOP
+# SHARPNESS
+# BRIGHTNESS
+# COLOR
+# CONTRAST
+# IMAGE BLUR , GUASSIAN BLUR
+
+
+from PIL import Image   #INSTALLATION PILOW LIBRARY
+
+# SYNTAX----
+
+# VARIABLE=Image.open("path of image")
+
+img=Image.open('dog.jpg')
+img.save('dog.png')
